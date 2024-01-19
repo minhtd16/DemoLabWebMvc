@@ -1,0 +1,27 @@
+﻿
+@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>     
+    <form method="post" action="/Demo/Login">
+        <label for="">Tên đăng nhập</label><br />
+        <input type="text" placeholder="Nhập tên đăng nhập" value="@ViewBag.Ten" name="TenDangNhap"/>
+        <br />
+
+        <label for="">Tên đăng nhập</label><br />
+        <input type="password" placeholder="Nhập tên đăng nhập" value="@ViewBag.Pas" name="MatKhau"/>
+        <br />
+        <span style="color:red">@ViewBag.Erorr</span>
+        <hr />
+        <input type="submit" value="Đăng nhập hệ thống" />           
+    </form>   
+</body>
+</html>
+
+
+
+
