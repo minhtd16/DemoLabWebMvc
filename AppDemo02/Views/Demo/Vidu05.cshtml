@@ -1,0 +1,36 @@
+﻿
+@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vidu05</title>
+</head>
+<body>
+    <div>
+        <h4>Danh sách cán bộ:</h4>
+        @{ int i = 0;
+            foreach (var item in ViewData["ListHoTen"] as string[])
+            {
+                i++;
+                <span>@i - @item</span>
+                <hr />
+            }
+        }
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

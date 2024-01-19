@@ -1,0 +1,46 @@
+﻿
+@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ví dụ 03 Tạo bảng</title>
+</head>
+<body>
+    <div>
+        <h3>@ViewBag.Title</h3>
+        <hr style="margin-top:0; margin-bottom:0" />
+        <p style="text-align: justify; margin-top: 0; margin-bottom: 5px">
+            @ViewBag.Content
+        </p>
+        <div>
+            <table border="1" rules="all" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Họ lót</th>
+                        <th>Tên</th>
+                        <th>Mã sinh viên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int j = 0;
+                        for (int i = 0; i < 5; i++)
+                        {
+                            j = i + 1;
+                            <tr>
+                                <td>@j</td>
+                                <td>Trịnh Sỹ</td>
+                                <td>Tùng</td>
+                                <td>226103000<span>@j</span></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

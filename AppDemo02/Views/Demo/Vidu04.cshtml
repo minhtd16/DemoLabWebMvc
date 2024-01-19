@@ -1,0 +1,50 @@
+﻿
+@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" /> <title>Ví dụ 04</title>
+</head>
+<body>
+    <div>
+        <h3>@ViewBag.Title</h3>
+        <hr style="margin-top:0; margin-bottom:0" />
+        <p style="text-align: justify; margin-top: 0; margin-bottom: 3px">
+            @ViewBag.Content
+        </p>
+        <div>
+            <table border="1" rules="all" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Loại sản phẩm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int j = 0;
+                        for (int i = 0; i < 5; i++)
+                        {
+                            j = i + 1;
+                            <tr>
+                                <td style="text-align:center">@j</td>
+                                <td>
+                                    <span>Nhập tên sản phẩm</span><br />
+                                    <input type="text" />
+                                </td>
+                                <td>
+                                    <input type="radio" name="@j" /> Like New <br />
+                                    <input type="radio" name="@j" /> Old 99% <br />
+                                    <input type="radio" name="@j" checked /> New 100% <br />
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

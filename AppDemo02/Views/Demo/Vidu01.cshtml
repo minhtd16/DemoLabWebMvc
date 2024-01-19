@@ -1,0 +1,44 @@
+﻿@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vidu01</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewBag.Title</h2>
+        <hr />
+        <div>
+            <span>Label</span> <br />
+            @Html.Label("txt_SinhVien_Ten")
+            <hr />
+            <span>Textbox</span> <br />
+            @Html.TextBox("txt_SinhVien_Ten")
+            <hr />
+            <span>TextArea</span> <br />
+            @Html.TextArea("Description", "Nội dung hiển thị tại đây",
+                        new { @class = "form-control" })
+            <hr />
+            <span>Check box</span> <br />
+            @Html.CheckBox("isActive", true) Buổi sáng @Html.CheckBox("isActive", false) Buổi chiều
+            <hr />
+            <span></span> <br />
+            Nam:   @Html.RadioButton("GioiTinh", "Nam")
+            Nữ: @Html.RadioButton("GioiTinh", "Nu")
+            <hr />
+            <span>Password</span> <br />
+            @Html.Password("txt_MatKhau")
+            <hr />
+            <span>Hiển thị text (là thẻ span)</span> <br />
+            @Html.Display("txt_SinhVien_Ten")
+            <hr />
+            <span>Editor</span> <br />
+            @Html.Editor("edit_SinhVien_Ten")
+            <hr />            
+        </div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,51 @@
+﻿
+@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vidu05</title>
+</head>
+<body>
+    <div>
+        <h2>@ViewBag.tieuDe</h2> <hr />
+        @*Cách tạo 1 dòng chú thích trên trang cshtml*@
+        <!--
+           Cách tạo nhiều dòng chú thích trên tệp cshtml
+        -->
+        @{
+            <span>- Cách khai báo biến trong tệp cshtml</span><br />
+            int a1 = 10;
+            int b1 = 20;
+            int tong1 = a1 + b1;
+            <span>Tổng 10 + 20 = @tong1</span>
+            <hr />
+        }
+        @{
+            <span>- Câu lệnh rẽ nhánh trong cshtml</span><br />
+            int a2 = 10, b2 = 20;
+            if (a2 >= a1)
+            {<span>do a2 = @a2 và a1=@a1 => Biến a2 có giá trị lớn hơn biến a1</span>}
+            else 
+            if (a2 < a1)
+                {<span>do a2 = @a2 và a1=@a1=> Biến a2 có giá trị nhỏ hơn biến a1</span> }
+            <hr />
+        }
+        @{
+            string numb_str;
+            Random rd = new Random();
+            <span>- Vòng lặp for trong cshtml</span><br />
+            for (int i = 0; i < 10; i++)
+            {
+                numb_str = rd.Next(1, 100).ToString();
+                <span>Số thứ @i có giá trị = @numb_str </span> <br />
+            }
+        }
+    </div>
+</body>
+</html>
+
+
+
+
+

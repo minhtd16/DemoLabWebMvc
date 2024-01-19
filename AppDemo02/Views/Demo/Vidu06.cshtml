@@ -1,0 +1,41 @@
+﻿
+@{ Layout = null;}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vidu05</title>
+</head>
+<body>
+    <div>
+        <h3>@ViewBag.Title</h3>
+        <hr style="margin-top:0; margin-bottom:0" />
+
+        @*Chuyển đến trang khác trên cshtml bằng thẻ a*@
+        <a href="/Demo/Vidu01" style="text-decoration:none">
+            Chuyển đến trang ví dụ 01
+        </a><br />
+        <hr />
+
+        @*Chuyển đến trang ví dụ 2 bằng thẻ link kiểu 2*@
+        @Html.ActionLink("Chuyển đến trang ví dụ 02", "Vidu02", "Demo")
+        <hr />
+
+        @*Chuyển đến trang Quản lý sinh viên bằng button gọi controller*@
+        <form method="post" action="/Demo/Vidu03">
+            <input type="submit" value="Chuyển đến trang ví dụ 03" />
+        </form>
+        <hr />
+
+        @*Chuyển đến trang Quản lý sinh viên bằng button gọi controller *@
+        <form method="post" action="/Demo/Vidu04">
+            <input type="submit" value="Chuyển đến trang ví dụ 04" />
+        </form>
+        <hr />
+        <form method="post" action="/Demo/ChuyenTrang">
+            <input type="submit" value="Chuyển đến trang ví dụ 05" />
+            <br /> <span>(Dùng hàm trong mã C#)</span>
+        </form>
+    </div>
+</body>
+</html>
